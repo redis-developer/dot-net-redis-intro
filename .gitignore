@@ -1,0 +1,4 @@
+**/obj/**
+**/bin**
+**/Session.vim
+.idea
