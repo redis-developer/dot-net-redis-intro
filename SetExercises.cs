@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using StackExchange.Redis;
 
@@ -7,6 +8,7 @@ namespace Redis101Examples
     {
         public static void setExercises(IDatabase db)
         {
+            Console.WriteLine("Running Set tests...");
             // Set
             db.SetAdd("avengers", "Iron Man"); // add a single item to the set
             List<RedisValue> avengers = new List<RedisValue>();

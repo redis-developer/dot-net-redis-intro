@@ -1,3 +1,4 @@
+using System;
 using StackExchange.Redis;
 
 namespace Redis101Examples
@@ -6,6 +7,7 @@ namespace Redis101Examples
     {
         public static void hllExercises(IDatabase db)
         {
+            Console.WriteLine("Running HyperLogLog exercises...");
             // Hyperloglog
             db.HyperLogLogAdd("unique:landingpage:hits", "userId:123");
             db.HyperLogLogAdd("unique:landingpage:hits", "userId:456");

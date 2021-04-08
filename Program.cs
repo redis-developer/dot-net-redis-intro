@@ -10,7 +10,7 @@ namespace Redis101Examples
         static void Main(string[] args)
         {
             // Configuration options and patterns
-            string redisConfiguration = "localhost:6380"; // Store *basic* information in a string
+            string redisConfiguration = "localhost:6379"; // Store *basic* information in a string
             var options = ConfigurationOptions.Parse(redisConfiguration); // create a ConfigurationOptions instance
             options.AllowAdmin = true; // and set specific details with options
             options.Ssl = false;

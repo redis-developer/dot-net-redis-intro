@@ -1,3 +1,4 @@
+using System;
 using System.Text;
 using StackExchange.Redis;
 
@@ -7,6 +8,7 @@ namespace Redis101Examples
     {
         public static void stringExercises(IDatabase db)
         {
+            Console.WriteLine("Running String tests...");
             // Basic String operations 
             // Redis String
             db.StringSet("key", "value");

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using StackExchange.Redis;
 
@@ -7,6 +8,7 @@ namespace Redis101Examples
     {
         public static void hashExercises(IDatabase db)
         {
+            Console.WriteLine("Running Hash exercises...");
             // Hash
             db.HashSet("avenger:1", "name", "Tony Stark"); // Set a single has field
             List<HashEntry> fields = new List<HashEntry>();

@@ -7,6 +7,7 @@ namespace Redis101Examples
     {
         public static void pubSubExercises(ConnectionMultiplexer redisMultiplexer)
         {
+            Console.WriteLine("Running Pub/Sub exercises...");
             // PubSub
             // Async vs Sync handlers
             // Sequential vs Concurrent message handling

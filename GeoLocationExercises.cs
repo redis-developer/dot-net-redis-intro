@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using StackExchange.Redis;
 
@@ -7,6 +8,7 @@ namespace Redis101Examples
     {
         public static void geoLocationExercises(IDatabase db)
         {
+            Console.WriteLine("Running Geo exercises...");
             // GeoLocation
             db.GeoAdd("avenger:locations", -73.984016, 40.754932, "Stark_Tower"); // Add single location
 

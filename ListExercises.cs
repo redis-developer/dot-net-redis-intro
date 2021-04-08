@@ -1,3 +1,4 @@
+using System;
 using StackExchange.Redis;
 
 namespace Redis101Examples
@@ -6,6 +7,7 @@ namespace Redis101Examples
     {
         public static void listExercises(IDatabase db)
         {
+            Console.WriteLine("Running List exercises...");
             // List
             db.ListLeftPush("avengerList", "Iron Man"); // Insert single value
             db.ListLeftPush("avengerList", new RedisValue[] {"Wasp", "Ant Man"}); // Insert multiple values

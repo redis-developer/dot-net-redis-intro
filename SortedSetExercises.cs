@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using StackExchange.Redis;
 
@@ -7,6 +8,7 @@ namespace Redis101Examples
     {
         public static void sortedSetExercises(IDatabase db)
         {
+            Console.WriteLine("Running Sorted Set tests...");
             // Sorted Set
             SortedSetEntry avengerSortedSetEntry = new SortedSetEntry("issue 100", 1972);
             List<SortedSetEntry> avengerIssuesList = new List<SortedSetEntry>();
