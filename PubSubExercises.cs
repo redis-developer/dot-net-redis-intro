@@ -1,5 +1,6 @@
 using System;
 using StackExchange.Redis;
+using Xunit;
 
 namespace Redis101Examples
 {
@@ -13,14 +14,13 @@ namespace Redis101Examples
             // Sequential vs Concurrent message handling
             // Differences from Streams
             // - Pub/Sub has no history, messages are fire and forget
-            // - 
 
             // Similar to the IDatabase object, this is a lightweight pass-through object to be used and discarded
             ISubscriber subscription = redisMultiplexer.GetSubscriber();
 
             // subscribing to a channel V1
             subscription.Subscribe("customer:request:events",
-                (channel, message) => { Console.WriteLine("Something that does something in response to {0}", message); });
+                (channel, message) => { Console.WriteLine("Pub/Sub message {0}", message); });
 
             // subscribing to a channel; v2
             // Synchronous - messages are processed in the order received but may delay each other and code hampers scalability
