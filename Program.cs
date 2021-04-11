@@ -17,7 +17,7 @@ namespace Redis101Examples
             options.ConnectRetry = 1;
             options.HighPrioritySocketThreads = true;
             
-            // Multiplexor is intended to be reused
+            // Multiplexer is intended to be reused
             ConnectionMultiplexer redisMultiplexer = ConnectionMultiplexer.Connect(options);
             
             // The database reference is a lightweight passthrough object intended to be used and discarded

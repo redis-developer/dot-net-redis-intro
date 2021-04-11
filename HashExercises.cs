@@ -12,8 +12,9 @@ namespace Redis101Examples
             Console.WriteLine("Running Hash exercises...");
             db.KeyDelete("avenger:1");
 
-            // 1. Create a new Redis hash, with one field.
+            // 1. Create a new Redis hash, with two fields.
             db.HashSet("avenger:1", "name", "Tony Stark");
+            db.HashSet("avenger:1", "age", "41");
 
             // 2. Get the value of a field from a Hash.
             //    What's the name of avenger 1?

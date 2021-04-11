@@ -25,13 +25,9 @@ namespace Redis101Examples
             avengerIssuesList.Add(new SortedSetEntry("Quicksilver", 118));
             db.SortedSetAdd("avengers:strength", avengerIssuesList.ToArray());
 
-            // 3. Let's find the weakest and strongest Avengers.
+            // 3. Let's find the strongest Avenger.
             //    A super efficient operation (O(log n)) even with sets
             //    containing millions of elements.
-            SortedSetEntry[] weakestResults = db.SortedSetRangeByRankWithScores("avengers:strength", 0, 0, order: Order.Ascending);
-            var weakest = (SortedSetEntry)weakestResults.GetValue(0);
-            Assert.Equal("Vision", weakest.Element);
-
             SortedSetEntry[] strongestResults = db.SortedSetRangeByRankWithScores("avengers:strength", 0, 0, order: Order.Descending);
             var strongest = (SortedSetEntry)strongestResults.GetValue(0);
             Assert.Equal("Hulk", strongest.Element);

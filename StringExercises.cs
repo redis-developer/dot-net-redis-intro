@@ -24,7 +24,7 @@ namespace Redis101Examples
             // 3. Perform bitwise operations.
             db.StringSetBit("bitset1", 16, true); // Set the bit at offset 16 to 1
             bool isBitSet = db.StringGetBit("bitset1", 16); // Returns true or false for the value of the bit at offset 16
-            Assert.True(isBitSet, "Bit is not set to true!");
+            Assert.True(isBitSet);
 
             // 4. Create two new bitfields
             db.StringSet("bitfield0", new byte[] {3}); // Create new bitfields using binary safe string
