@@ -23,14 +23,18 @@ namespace Redis101Examples
 
 
             // 3. Write multiple fields all at once.
-            List<HashEntry> fields = new List<HashEntry>();
-            fields.Add(new HashEntry("alias", "Iron Man"));
-            fields.Add(new HashEntry("address", "Stark Tower"));
+            List<HashEntry> fields = new List<HashEntry>
+            {
+                new HashEntry("alias", "Iron Man"), new HashEntry("address", "Stark Tower")
+            };
             db.HashSet("avenger:1", fields.ToArray());
 
 
             // 4. Return the entire hash
             HashEntry[] entireHashset = db.HashGetAll("avenger:1");
+            // What are the 4 HashEntry names?
+            Assert.Equal(4, entireHashset.Length);
+
         }
     }
 }
