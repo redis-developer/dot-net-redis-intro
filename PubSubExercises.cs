@@ -4,7 +4,7 @@ using Xunit;
 
 namespace Redis101Examples
 {
-    class PubSubExercises
+    static class PubSubExercises
     {
         public static void pubSubExercises(ConnectionMultiplexer redisMultiplexer)
         {
@@ -31,7 +31,7 @@ namespace Redis101Examples
 
             // subscribing to a channel; v2
             // Asynchronous - messages are published concurrently and the code is a more scalable 
-            subscription.Subscribe("customer:completed:requests").OnMessage(async message =>
+            subscription.Subscribe("customer:completed:requests").OnMessage( message =>
             {
                 Console.WriteLine("Do some work when message, {0}, is received.", message);
             });
