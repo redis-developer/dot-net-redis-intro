@@ -1,5 +1,6 @@
 using System;
 using StackExchange.Redis;
+using Xunit;
 
 namespace Redis101Examples
 {
@@ -11,7 +12,8 @@ namespace Redis101Examples
             // Hyperloglog
             db.HyperLogLogAdd("unique:landingpage:hits", "userId:123");
             db.HyperLogLogAdd("unique:landingpage:hits", "userId:456");
-            long cardinality = db.HyperLogLogLength("unique:landingpage:hits");
+            var cardinality = db.HyperLogLogLength("unique:landingpage:hits");
+            Assert.Equal(2, cardinality);
         }
     }
 }
