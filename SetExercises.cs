@@ -14,12 +14,15 @@ namespace Redis101Examples
 
             // 1. Add items to a set.
             db.SetAdd("avengers", "Iron Man");
-            List<RedisValue> avengers = new List<RedisValue>();
-            avengers.Add("Hulk");
-            avengers.Add("Hulk");
-            avengers.Add("Hulk");
-            avengers.Add("Thor");
-            avengers.Add("Ant Man");
+            // Initialize a new collection with duplicates
+            List<RedisValue> avengers = new List<RedisValue>
+            {
+                "Hulk",
+                "Hulk",
+                "Hulk",
+                "Thor",
+                "Ant Man"
+            };
             long numAdded = db.SetAdd("avengers", avengers.ToArray());
             Assert.Equal(3, numAdded);
 
