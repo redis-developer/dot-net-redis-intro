@@ -20,7 +20,9 @@ namespace Redis101Examples
             //    What's the name of avenger 1?
             RedisValue name = db.HashGet("avenger:1", "name");
             Assert.Equal("Tony Stark", name);
-
+            
+            //What if I want to update an existing hash element
+            db.HashSet("avenger:1", "age", "42");
 
             // 3. Write multiple fields all at once.
             List<HashEntry> fields = new List<HashEntry>
