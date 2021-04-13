@@ -12,12 +12,16 @@ namespace Redis101Examples
             // GeoLocation
             db.GeoAdd("avenger:locations", -73.984016, 40.754932, "Stark_Tower"); // Add single location
 
-            List<GeoEntry> avengerLocations = new List<GeoEntry>();
-            avengerLocations.Add(new GeoEntry(-73.968008, 40.771071, "Avengers_Mansion"));
+            List<GeoEntry> avengerLocations = new List<GeoEntry>
+            {
+                new(-73.968008, 40.771071, "Avengers_Mansion")
+            };
             db.GeoAdd("avenger:locations", avengerLocations.ToArray()); // Add multiple locations
 
             // Get the distance between the locations in meters
-            db.GeoDistance("avenger:locations", "Stark_Tower", "Avengers_Mansion", GeoUnit.Meters);
+            //db.GeoDistance("avenger:locations", "Stark_Tower", "Avengers_Mansion", GeoUnit.Meters);
+            // GeoUnit.Meters is default, so this result is the same. Other options are Kilometers, Miles, Feet
+            db.GeoDistance("avenger:locations", "Stark_Tower", "Avengers_Mansion");
 
             // Get the longitude and latitude of the requested member. Multiple locations can be returned by providing a RedisValue[] containing a list of members
             db.GeoPosition("avenger:locations", "Stark_Tower");
