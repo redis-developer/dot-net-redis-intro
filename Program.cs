@@ -1,13 +1,10 @@
-﻿using System;
-using System.Text;
-using System.Threading.Tasks;
-using StackExchange.Redis;
+﻿using StackExchange.Redis;
 
 namespace Redis101Examples
 {
     static class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             // Configuration options and patterns
             string redisConfiguration = "localhost:6379"; // Store *basic* information in a string
