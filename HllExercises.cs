@@ -5,7 +5,7 @@ namespace Redis101Examples
 {
     static class HllExercises
     {
-        public static void hllExercises(IDatabase db)
+        public static void Exercises(IDatabase db)
         {
             Console.WriteLine("Running HyperLogLog exercises...");
             // Hyperloglog

@@ -25,23 +25,23 @@ namespace Redis101Examples
             
             // All Redis commands and data types are supported and available through the API
 
-            StringExercises.stringExercises(db);
+            StringExercises.Exercises(db);
 
-            HashExercises.hashExercises(db);
+            HashExercises.Exercises(db);
 
-            ListExercises.listExercises(db);
+            ListExercises.Exercises(db);
 
-            SetExercises.setExercises(db);
+            SetExercises.Exercises(db);
 
-            SortedSetExercises.sortedSetExercises(db);
+            SortedSetExercises.Exercises(db);
 
-            GeoLocationExercises.geoLocationExercises(db);
+            GeoLocationExercises.Exercises(db);
 
-            HllExercises.hllExercises(db);
+            HllExercises.Exercises(db);
 
-            StreamExercises.streamExercises(db);
+            StreamExercises.Exercises(db);
 
-            PubSubExercises.pubSubExercises(redisMultiplexer);
+            PubSubExercises.Exercises(redisMultiplexer);
         }
     }
 }

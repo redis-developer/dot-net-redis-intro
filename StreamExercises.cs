@@ -5,7 +5,7 @@ namespace Redis101Examples
 {
     static class StreamExercises
     {
-        public static void streamExercises(IDatabase db)
+        public static void Exercises(IDatabase db)
         {
             Console.WriteLine("Running Stream exercises...");
             db.KeyDelete("hero:organization");

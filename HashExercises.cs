@@ -7,7 +7,7 @@ namespace Redis101Examples
 {
     static class HashExercises
     {
-        public static void hashExercises(IDatabase db)
+        public static void Exercises(IDatabase db)
         {
             Console.WriteLine("Running Hash exercises...");
             db.KeyDelete("avenger:1");

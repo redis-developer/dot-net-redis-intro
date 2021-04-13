@@ -7,7 +7,7 @@ namespace Redis101Examples
 {
     static class StringExercises
     {
-        public static void stringExercises(IDatabase db)
+        public static void Exercises(IDatabase db)
         {
             Console.WriteLine("Running String samples...");
 
@@ -20,7 +20,6 @@ namespace Redis101Examples
             byte[] key = Encoding.UTF8.GetBytes("key"), value = Encoding.UTF8.GetBytes("value");
             db.StringSet(key, value);
             byte[] rawValue = db.StringGet(key);
-            Console.WriteLine("rawValue byte[]: " + string.Join(",", rawValue));
 
             // 3. Perform bitwise operations.
             db.StringSetBit("bitset1", 16, true); // Set the bit at offset 16 to 1
@@ -37,6 +36,8 @@ namespace Redis101Examples
             byte[] resultValue = (byte[]) db.StringGet("resultBitfield"); // Resulting bitfield can be read back as a byte array
             long bitCount = db.StringBitCount("resultBitfield");
             Assert.Equal(1, bitCount);
+            //What should you see when you uncomment the next line
+            //Console.WriteLine("resultValue byte[]: " + string.Join(",", resultValue));
         }
     }
 }

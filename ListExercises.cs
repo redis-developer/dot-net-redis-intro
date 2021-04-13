@@ -6,7 +6,7 @@ namespace Redis101Examples
 {
     static class ListExercises
     {
-        public static void listExercises(IDatabase db)
+        public static void Exercises(IDatabase db)
         {
             Console.WriteLine("Running List exercises...");
             db.KeyDelete("avengerList");

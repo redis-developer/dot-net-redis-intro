@@ -6,7 +6,7 @@ namespace Redis101Examples
 {
     static class PubSubExercises
     {
-        public static void pubSubExercises(ConnectionMultiplexer redisMultiplexer)
+        public static void Exercises(ConnectionMultiplexer redisMultiplexer)
         {
             Console.WriteLine("Running Pub/Sub exercises...");
             // PubSub
