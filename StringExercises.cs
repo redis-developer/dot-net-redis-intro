@@ -5,7 +5,7 @@ using StackExchange.Redis;
 
 namespace Redis101Examples
 {
-    class StringExercises
+    static class StringExercises
     {
         public static void stringExercises(IDatabase db)
         {
@@ -20,6 +20,7 @@ namespace Redis101Examples
             byte[] key = Encoding.UTF8.GetBytes("key"), value = Encoding.UTF8.GetBytes("value");
             db.StringSet(key, value);
             byte[] rawValue = db.StringGet(key);
+            Console.WriteLine("rawValue byte[]: " + string.Join(",", rawValue));
 
             // 3. Perform bitwise operations.
             db.StringSetBit("bitset1", 16, true); // Set the bit at offset 16 to 1

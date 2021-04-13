@@ -5,7 +5,7 @@ using StackExchange.Redis;
 
 namespace Redis101Examples
 {
-    class HashExercises
+    static class HashExercises
     {
         public static void hashExercises(IDatabase db)
         {

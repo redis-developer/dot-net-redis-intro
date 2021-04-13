@@ -5,7 +5,7 @@ using StackExchange.Redis;
 
 namespace Redis101Examples
 {
-    class Program
+    static class Program
     {
         static void Main(string[] args)
         {

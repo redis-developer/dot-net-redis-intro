@@ -5,7 +5,7 @@ using StackExchange.Redis;
 
 namespace Redis101Examples
 {
-    class SetExercises
+    static class SetExercises
     {
         public static void setExercises(IDatabase db)
         {

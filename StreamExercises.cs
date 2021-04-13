@@ -3,7 +3,7 @@ using StackExchange.Redis;
 
 namespace Redis101Examples
 {
-    class StreamExercises
+    static class StreamExercises
     {
         public static void streamExercises(IDatabase db)
         {

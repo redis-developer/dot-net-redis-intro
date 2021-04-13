@@ -3,7 +3,7 @@ using StackExchange.Redis;
 
 namespace Redis101Examples
 {
-    class HllExercises
+    static class HllExercises
     {
         public static void hllExercises(IDatabase db)
         {

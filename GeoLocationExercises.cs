@@ -4,7 +4,7 @@ using StackExchange.Redis;
 
 namespace Redis101Examples
 {
-    class GeoLocationExercises
+    static class GeoLocationExercises
     {
         public static void geoLocationExercises(IDatabase db)
         {

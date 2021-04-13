@@ -4,7 +4,7 @@ using StackExchange.Redis;
 
 namespace Redis101Examples
 {
-    class ListExercises
+    static class ListExercises
     {
         public static void listExercises(IDatabase db)
         {
