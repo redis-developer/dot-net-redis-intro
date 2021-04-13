@@ -4,6 +4,9 @@ using Xunit;
 
 namespace Redis101Examples
 {
+    // You can do 3 things with HyperLogLog: Add, Union, Merge
+    // Probabilistic data type: How many unique things are in this set? Cardinality?
+    // HyperLogLog will always be only 12kb 
     static class HllExercises
     {
         public static void Exercises(IDatabase db)
